@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Keep navbar on top */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #0056b3, #006bb3); /* Gradient background */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.navbar h1 {
+    font-family: 'Roboto', sans-serif; /* Professional font */
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar .toggle {
+    width: 60px;
+    height: 30px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.navbar .toggle:hover {
+    background-color: #d1d1d1;
+}
+
+.circle {
+    width: 50%;
+    height: 100%;
+    background-color: #5fbe16;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.circle.fixed {
+    transform: translateX(100%);
+}
+
+/* General Container */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin-top: 80px; /* To prevent overlap with fixed navbar */
+}
+
+/* Buttons Styling */
+.gen, .del {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.gen:hover, .del:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.del {
+    background-color: #dc3545;
+}
+
+.del:hover {
+    background-color: #c82333;
+}
+.output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #e7f3fe;
+    color: #333;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.output:hover {
+    background-color: #d1e7fd;
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+}
+
+.output .para {
+    flex-grow: 1;
+    text-align: left;
+    color: #666666;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.output i {
+    margin-left: 10px;
+    color: #007bff;  /* Make sure the color is similar to your previous one */
+    font-size: 18px;  /* Adjust the size if needed */
+    transition: color 0.3s ease;  /* Adding a smooth color transition on hover */
+}
+
+.output i:hover {
+    color: #0056b3;  /* Change to darker blue on hover */
+}
